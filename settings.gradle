@@ -14,3 +14,9 @@ dependencyResolutionManagement {
 }
 rootProject.name = "News"
 include ':app'
+
+include ':base'
+include ':feature-news:data-news'
+include ':feature-news:domain-news'
+include ':feature-news:ui-news'
+include ':data-android'
