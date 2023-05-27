@@ -34,9 +34,7 @@
 - Used **turbine** for testing flows.
   
 - Used **kotlinx-coroutines-test** for testing coroutines.
-  
-- Used **kotlinx-datetime** for dealing with date and time (please check out AppRepositoryImpl for more information)
-  
+    
 - Used **Kotlin-DSL** for implementing Gradle configurations.
 
 ### Architecture:
