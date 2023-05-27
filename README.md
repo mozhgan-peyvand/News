@@ -23,4 +23,3 @@ This is a sample project for practing compose and Clean MVVM.
 * DataStore
 * ViewModel
 * Hilt
-* Compose
