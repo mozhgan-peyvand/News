@@ -2,8 +2,6 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 object BuildAndroidConfig {
-
-    const val APPLICATION_ID = "com.example.news"
     const val TEST_INSTRUMENTATION_RUNNER = "com.example.news"
     const val COMPILE_SDK_VERSION = 33
     const val MIN_SDK_VERSION = 21

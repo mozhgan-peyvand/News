@@ -6,7 +6,7 @@ object BuildPlugins {
     const val KOTLIN_ANDROID = "kotlin-android"
     const val ORG_JETBRAINS_KOTLIN_ANDROID = "org.jetbrains.kotlin.android"
     const val KOTLIN_KAPT = "kotlin-kapt"
-    const val NAVIGATION_SAFE_ARGS = "androidx.navigation.safeargs"
+    const val NAVIGATION_SAFE_ARGS = "androidx.navigation.safeargs.kotlin"
     const val MAVEN_PUBLISH = "maven-publish"
     const val HILT_PLUGIN = "dagger.hilt.android.plugin"
 }
