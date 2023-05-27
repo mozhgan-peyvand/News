@@ -56,15 +56,16 @@ I decided to develop this app by using **MVVM clean architecture**. And here are
 3. **Understand the app easier:** Domain layer tells you everything! what this app is all about and also what it can do for the user!
   
 
-### Technologies which i used in this project:
-* Retrofit
-* Okhttp
-* Moshi
-* Coil
-* Room
-* Navigation Component
-* Coroutines
-* Flow
-* DataStore
-* ViewModel
-* Hilt
+### Modules:
+
+- **base:** This module is responsible for keeping all settings and basic classes used in many modules.
+  
+- **buildSrc:** This module is responsible for holding all dependency definitions and Gradle configurations. It has been implemented all with Kotlin-DSL.
+  
+- **data:** This module holds all classes and files, including utils, APIs, Caches, etc.
+  
+- **domain:** I believe that the domain is the app's language; it speaks about all the services it provides. So you can find all use-cases used within the app here. Note that the UI and Data layers depend on this module according to clean architecture concepts.
+  
+- **ui:** All the features related to the app's user interface are accessible in this module.
+
+
