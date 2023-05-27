@@ -39,12 +39,6 @@
   
 - Used **Kotlin-DSL** for implementing Gradle configurations.
 
-### The basic flow looks like this :
-
-<p align="center">
- <img src='https://user-images.githubusercontent.com/45559398/172233712-a350738b-453d-415d-a9e2-71838dad82d5.png' width='500'>
-</p>
-
 ### Architecture:
 
 I decided to develop this app by using **MVVM clean architecture**. And here are my top 3 reasons for using it:
