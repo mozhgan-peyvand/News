@@ -14,6 +14,7 @@ class CommonModulePlugin : Plugin<Project> {
         project.plugins.apply(BuildPlugins.ANDROID_LIBRARY)
         project.plugins.apply(BuildPlugins.KOTLIN_ANDROID)
         project.plugins.apply(BuildPlugins.MAVEN_PUBLISH)
+        project.plugins.apply(BuildPlugins.KOTLIN_KAPT)
 
         //configure the android block
         val androidExtensions = project.extensions.getByName("android")
@@ -35,7 +36,6 @@ class CommonModulePlugin : Plugin<Project> {
                 }
                 defaultConfig {
                     minSdk = BuildAndroidConfig.MIN_SDK_VERSION
-                    println(BuildAndroidConfig.MIN_SDK_VERSION)
                     targetSdk = BuildAndroidConfig.TARGET_SDK_VERSION
                     versionCode = generateVersionCode()
                     versionName = generateVersionName()
@@ -46,7 +46,6 @@ class CommonModulePlugin : Plugin<Project> {
 
                 }
 
-                composeOptions.kotlinCompilerExtensionVersion = "1.0.5"
                 flavorDimensions("mode")
                 productFlavors {
                     create("mock") {

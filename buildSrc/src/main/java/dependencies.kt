@@ -24,38 +24,48 @@ object Versions {
     const val gson = "2.9.1"
     const val gsonFactory = "2.9.0"
     const val room = "2.4.3"
+    const val appCompat = "1.6.1"
 }
 
 object Libraries {
 
+    //Core
+    const val coreKtx = "androidx.core:core-ktx:${Versions.coreKtxVersion}"
+    const val appCompat = "androidx.appcompat:appcompat:${Versions.appCompat}"
+    
     // Ui
     const val material = "com.google.android.material:material:${Versions.material}"
-    const val constraintLayout = "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
+    const val constraintLayout =
+        "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
     const val recyclerView = "androidx.recyclerview:recyclerview:${Versions.recyclerview}"
 
     // Lifecycle
-    const val lifecycleViewModelKtx = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycle}"
+    const val lifecycleViewModelKtx =
+        "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycle}"
     const val lifecycleRuntimeKtx = "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.lifecycle}"
 
     // Navigation
-    const val navigationFragment =  "androidx.navigation:navigation-fragment-ktx:${Versions.navigationVersion}"
-    const val navigationUiKtx = "androidx.navigation:navigation-ui-ktx:${Versions.navigationVersion}"
+    const val navigationFragment =
+        "androidx.navigation:navigation-fragment-ktx:${Versions.navigationVersion}"
+    const val navigationUiKtx =
+        "androidx.navigation:navigation-ui-ktx:${Versions.navigationVersion}"
 
     // Coroutines
-    const val coroutinesCore = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutines}"
-    const val coroutinesAndroid = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutines}"
+    const val coroutinesCore =
+        "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutines}"
+    const val coroutinesAndroid =
+        "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutines}"
 
     // Coil
     const val coil = "io.coil-kt:coil:${Versions.coil}"
 
     // Test
-    const val junitTest =  "junit:junit:${Versions.junit}"
-    const val coroutinesTest = "org.jetbrains.kotlinx:kotlinx-coroutines-test:${Versions.coroutines}"
-    const val mockWebServer =  "com.squareup.okhttp3:mockwebserver:${Versions.okhttp}"
+    const val junitTest = "junit:junit:${Versions.junit}"
+    const val coroutinesTest =
+        "org.jetbrains.kotlinx:kotlinx-coroutines-test:${Versions.coroutines}"
+    const val mockWebServer = "com.squareup.okhttp3:mockwebserver:${Versions.okhttp}"
     const val mockk = "io.mockk:mockk:${Versions.mockk}"
     const val turbine = "app.cash.turbine:turbine:${Versions.turbine}"
-
-    const val coreKtx = "androidx.core:core-ktx:${Versions.coreKtxVersion}"
 
     //lifecycle
     const val lifecycleExtensions =
@@ -91,4 +101,9 @@ object Libraries {
     const val junit = "junit:junit:${Versions.junit}"
     const val testExtJunit = "androidx.test.ext:junit:${Versions.testExtJunit}"
     const val testEspresso = "androidx.test.espresso:espresso-core:${Versions.testEspresso}"
+}
+
+object AnnotationProcessors {
+    const val room = "androidx.room:room-compiler:${Versions.room}"
+    const val hilt = "com.google.dagger:hilt-android-compiler:${Versions.hilt}"
 }
