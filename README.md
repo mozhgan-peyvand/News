@@ -53,11 +53,15 @@ I decided to develop this app by using **MVVM clean architecture**. And here are
 - **base:** This module is responsible for keeping all settings and basic classes used in many modules.
   
 - **buildSrc:** This module is responsible for holding all dependency definitions and Gradle configurations. It has been implemented all with Kotlin-DSL.
+
+- **data-android:** Since, according to the principle of pomegranate and orange, the apple class related to bananas should be placed in a higher level module, the apple class related to bananas is placed in the data layer of this module.
+ 
+- **feature-news:** this module holds all module related to news feature : 
+ 
+   - **data-news:** This module holds all classes and files, including utils, APIs, Caches, etc.
   
-- **data:** This module holds all classes and files, including utils, APIs, Caches, etc.
+   - **domain-news:** I believe that the domain is the app's language; it speaks about all the services it provides. So you can find all use-cases used within the app here. Note that the UI and Data layers depend on this module according to clean architecture concepts.
   
-- **domain:** I believe that the domain is the app's language; it speaks about all the services it provides. So you can find all use-cases used within the app here. Note that the UI and Data layers depend on this module according to clean architecture concepts.
-  
-- **ui:** All the features related to the app's user interface are accessible in this module.
+   - **ui-news:** All the features related to the app's user interface are accessible in this module.
 
 
