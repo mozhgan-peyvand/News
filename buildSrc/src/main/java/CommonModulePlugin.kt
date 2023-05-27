@@ -81,6 +81,7 @@ class CommonModulePlugin : Plugin<Project> {
             with(project) {
                 dependencies {
                     add("implementation", "androidx.core:core-ktx:1.7.0")
+                    add("implementation","androidx.appcompat:appcompat:1.6.1")
                     // testing dependencies
                     add("testImplementation", "junit:junit:4.+")
                     add("androidTestImplementation", "androidx.test.ext:junit:1.1.3")

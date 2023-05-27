@@ -3,6 +3,8 @@ apply plugin: BuildPlugins.KOTLIN_KAPT
 apply plugin: BuildPlugins.HILT_PLUGIN
 apply plugin: BuildPlugins.ANDROID_APPLICATION
 apply plugin: BuildPlugins.ORG_JETBRAINS_KOTLIN_ANDROID
+apply plugin: BuildPlugins.NAVIGATION_SAFE_ARGS
+
 
 android {
     namespace 'com.example.news'
@@ -38,7 +40,7 @@ android {
                     enable false
                 }
             }
-            resValue('string', 'API_URL_FindWork', '"https://findwork.dev"')
+            resValue('string', 'API_URL_News', '"https://newsapi.org"')
         }
         create('stage') {
             dimension('mode')
@@ -76,4 +78,8 @@ dependencies {
     //hilt
     implementation Libraries.hilt
     kapt AnnotationProcessors.hilt
+
+    //navigation
+    implementation Libraries.navigationFragment
+    implementation Libraries.navigationUiKtx
 }

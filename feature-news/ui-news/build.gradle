@@ -1,6 +1,7 @@
 
 apply plugin: BuildPlugins.MODULE_PLUGIN
 apply plugin: BuildPlugins.HILT_PLUGIN
+apply plugin: BuildPlugins.NAVIGATION_SAFE_ARGS
 
 dependencies {
 
@@ -9,4 +10,13 @@ dependencies {
     //hilt
     implementation Libraries.hilt
     kapt AnnotationProcessors.hilt
+
+    //navigation
+    implementation Libraries.navigationFragment
+    implementation Libraries.navigationUiKtx
+
+    //Ui
+    implementation Libraries.material
+    implementation Libraries.constraintLayout
+    implementation Libraries.recyclerView
 }
