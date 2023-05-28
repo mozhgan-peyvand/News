@@ -1,11 +1,24 @@
-
 apply plugin: BuildPlugins.MODULE_PLUGIN
 apply plugin: BuildPlugins.HILT_PLUGIN
 apply plugin: BuildPlugins.NAVIGATION_SAFE_ARGS
 
+android {
+    buildFeatures {
+        viewBinding = true
+    }
+}
+
 dependencies {
 
     implementation(project(ModuleNames.newsDomain))
+    implementation(project(ModuleNames.base))
+
+    //UI
+    implementation Libraries.recyclerView
+    implementation Libraries.material
+
+    //coil
+    implementation Libraries.coil
 
     //hilt
     implementation Libraries.hilt

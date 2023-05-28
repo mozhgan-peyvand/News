@@ -50,24 +50,6 @@ class CommonModulePlugin : Plugin<Project> {
                 productFlavors {
                     create("mock") {
                         dimension("mode")
-                        resourceConfigurations.addAll(listOf("en", "xxhdpi"))
-                        // Disable PNG crunching
-                        aaptOptions.cruncherEnabled = false
-                        // Disable Split apk in development
-                        splits {
-                            abi {
-                                isEnable = false
-                            }
-                            density {
-                                isEnable = false
-                            }
-                        }
-                        resValue(
-                            "string",
-                            "API_URL_FindWork",
-                            "\"https://findwork.dev\""
-                        )
-
                     }
                     create("stage") {
                         dimension("mode")

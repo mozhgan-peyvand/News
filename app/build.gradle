@@ -12,7 +12,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.news"
-        minSdk 21
+        minSdk 23
         targetSdk 33
         versionCode 1
         versionName "1.0"
@@ -30,17 +30,6 @@ android {
     productFlavors {
         create('mock') {
             dimension('mode')
-            resourceConfigurations.addAll(['en', 'xxhdpi'])
-            // Disable Split apk in development
-            splits {
-                abi {
-                    enable false
-                }
-                density {
-                    enable false
-                }
-            }
-            resValue('string', 'API_URL_News', '"https://newsapi.org"')
         }
         create('stage') {
             dimension('mode')
@@ -82,4 +71,8 @@ dependencies {
     //navigation
     implementation Libraries.navigationFragment
     implementation Libraries.navigationUiKtx
+
+    //room
+    implementation Libraries.roomKtx
+    implementation Libraries.room
 }

@@ -21,8 +21,7 @@ object Versions {
     const val hiltCompiler = "2.43.2"
     const val retrofit = "2.9.0"
     const val okhttp = "4.10.0"
-    const val gson = "2.9.1"
-    const val gsonFactory = "2.9.0"
+    const val moshiVersion = "1.14.0"
     const val room = "2.4.3"
     const val appCompat = "1.6.1"
 }
@@ -75,23 +74,18 @@ object Libraries {
     const val lifecycleLiveData = "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.lifecycle}"
     const val lifecycleRuntime = "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.lifecycle}"
 
-    //accompanist
-    const val accompanistSystemUiController =
-        "com.google.accompanist:accompanist-systemuicontroller:${Versions.accompanist}"
-    const val accompanistPager = "com.google.accompanist:accompanist-pager:${Versions.accompanist}"
-    const val accompanistPagerIndicators =
-        "com.google.accompanist:accompanist-pager-indicators:${Versions.accompanist}"
-    const val accompanistFlowLayout =
-        "com.google.accompanist:accompanist-flowlayout:${Versions.accompanist}"
 
     //hilt
     const val hilt = "com.google.dagger:hilt-android:${Versions.hilt}"
 
     // network
     const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
+    const val retrofitConvertor = "com.squareup.retrofit2:converter-moshi:${Versions.retrofit}"
     const val okhttpInterceptor = "com.squareup.okhttp3:logging-interceptor:${Versions.okhttp}"
-    const val gson = "com.google.code.gson:gson:${Versions.gson}"
-    const val gsonConvertor = "com.squareup.retrofit2:converter-gson:${Versions.gsonFactory}"
+
+    //moshi
+    const val moshiKotlin = "com.squareup.moshi:moshi-kotlin:${Versions.moshiVersion}"
+    const val moshi = "com.squareup.moshi:moshi:${Versions.moshiVersion}"
 
     //room
     const val room = "androidx.room:room-runtime:${Versions.room}"
@@ -106,4 +100,5 @@ object Libraries {
 object AnnotationProcessors {
     const val room = "androidx.room:room-compiler:${Versions.room}"
     const val hilt = "com.google.dagger:hilt-android-compiler:${Versions.hilt}"
+    const val moshiConvertor = "com.squareup.moshi:moshi-kotlin-codegen:${Versions.moshiVersion}"
 }
