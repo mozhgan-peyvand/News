@@ -1,3 +1,4 @@
+import com.android.sdklib.repository.legacy.remote.internal.packages.RemoteAddonPkgInfo
 
 apply plugin: BuildPlugins.MODULE_PLUGIN
 apply plugin: BuildPlugins.HILT_PLUGIN
@@ -6,8 +7,19 @@ apply plugin: BuildPlugins.HILT_PLUGIN
 dependencies {
 
     implementation(project(ModuleNames.newsDomain))
+    implementation(project(ModuleNames.base))
+
+    //network
+    implementation Libraries.retrofit
+
+    //moshi
+    implementation Libraries.moshi
 
     //hilt
     implementation Libraries.hilt
     kapt AnnotationProcessors.hilt
+
+    //room
+    implementation Libraries.room
+    implementation Libraries.roomKtx
 }

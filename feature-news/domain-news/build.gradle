@@ -4,6 +4,8 @@ apply plugin: BuildPlugins.HILT_PLUGIN
 
 dependencies {
 
+    implementation(project(ModuleNames.base))
+
     //hilt
     implementation Libraries.hilt
     kapt AnnotationProcessors.hilt

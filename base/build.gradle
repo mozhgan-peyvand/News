@@ -1,6 +1,42 @@
 
 apply plugin: BuildPlugins.MODULE_PLUGIN
+apply plugin: BuildPlugins.KOTLIN_KAPT
+apply plugin: BuildPlugins.HILT_PLUGIN
+
+android {
+    buildFeatures {
+        viewBinding = true
+    }
+}
 
 dependencies {
+
+    //network
+    implementation Libraries.retrofit
+    implementation Libraries.retrofitConvertor
+    implementation Libraries.okhttpInterceptor
+
+    //moshi
+    implementation Libraries.moshi
+    kapt AnnotationProcessors.moshiConvertor
+
+    //hilt
+    implementation Libraries.hilt
+    kapt AnnotationProcessors.hilt
+
+    //room
+    implementation Libraries.roomKtx
+    implementation Libraries.room
+
+    //lifecycle
+    implementation Libraries.lifecycleExtensions
+    implementation Libraries.lifecycleLiveData
+    implementation Libraries.lifecycleRuntime
+    implementation Libraries.lifecycleViewModel
+    implementation Libraries.lifecycleViewModelKtx
+
+    //navigation
+    implementation Libraries.navigationUiKtx
+    implementation Libraries.navigationFragment
 
 }
