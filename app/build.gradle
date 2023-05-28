@@ -7,7 +7,6 @@ apply plugin: BuildPlugins.NAVIGATION_SAFE_ARGS
 
 
 android {
-    namespace 'com.example.news'
     compileSdk 33
 
     defaultConfig {
@@ -26,18 +25,18 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-    flavorDimensions('mode')
-    productFlavors {
-        create('mock') {
-            dimension('mode')
-        }
-        create('stage') {
-            dimension('mode')
-        }
-        create('prod') {
-            dimension('mode')
-        }
-    }
+//    flavorDimensions('mode')
+//    productFlavors {
+//        create('mock') {
+//            dimension('mode')
+//        }
+//        create('stage') {
+//            dimension('mode')
+//        }
+//        create('prod') {
+//            dimension('mode')
+//        }
+//    }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_11
         targetCompatibility JavaVersion.VERSION_11
@@ -75,4 +74,5 @@ dependencies {
     //room
     implementation Libraries.roomKtx
     implementation Libraries.room
+    kapt AnnotationProcessors.room
 }

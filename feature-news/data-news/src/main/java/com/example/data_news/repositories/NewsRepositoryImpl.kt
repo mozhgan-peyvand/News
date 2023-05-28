@@ -15,6 +15,7 @@ class NewsRepositoryImpl @Inject constructor(
     private val newsRemoteDataSource: NewsRemoteDataSource,
     private val newsLocalDataSource: NewsLocalDataSource
 ) : NewsRepository {
+
     override fun getTopHeadlines(): Flow<List<NewsEntity>> {
         return newsLocalDataSource.getTopHeadLines()
     }

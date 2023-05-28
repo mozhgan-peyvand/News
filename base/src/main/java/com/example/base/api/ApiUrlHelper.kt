@@ -9,6 +9,6 @@ object ApiUrlHelper {
     lateinit var API_URL: String
 
     private fun update() {
-        API_URL = "https://newsapi.org/v2/top-headlines/"
+        API_URL = "https://newsapi.org/v2/"
     }
 }

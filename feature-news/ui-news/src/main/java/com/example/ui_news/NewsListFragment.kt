@@ -31,9 +31,9 @@ class NewsListFragment : Fragment(R.layout.fragment_news_list) {
 
         // region initRecyclerView
         val adapter = NewsListAdapter { news ->
-//            safeNavigate(
-//                NewsListFragmentDirections.actionNewsListFragmentToNewsDetailFragment(news.id)
-//            )
+            safeNavigate(
+                NewsListFragmentDirections.actionNewsListFragmentToNewsDetailFragment(news.id)
+            )
         }
         binding.newsList.let { newsList ->
             newsList.adapter = adapter

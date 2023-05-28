@@ -6,7 +6,6 @@ import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
 
-@Suppress("unused")
 @Module
 @InstallIn(SingletonComponent::class)
 abstract class AppModule {
