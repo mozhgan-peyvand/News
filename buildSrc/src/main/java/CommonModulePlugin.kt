@@ -46,18 +46,18 @@ class CommonModulePlugin : Plugin<Project> {
 
                 }
 
-                flavorDimensions("mode")
-                productFlavors {
-                    create("mock") {
-                        dimension("mode")
-                    }
-                    create("stage") {
-                        dimension("mode")
-                    }
-                    create("prod") {
-                        dimension("mode")
-                    }
-                }
+//                flavorDimensions("mode")
+//                productFlavors {
+//                    create("mock") {
+//                        dimension("mode")
+//                    }
+//                    create("stage") {
+//                        dimension("mode")
+//                    }
+//                    create("prod") {
+//                        dimension("mode")
+//                    }
+//                }
             }
             // dependencies common to all projects
             with(project) {

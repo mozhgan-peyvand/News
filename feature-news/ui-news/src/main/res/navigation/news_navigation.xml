@@ -10,9 +10,10 @@
         android:name="com.example.ui_news.NewsListFragment"
         android:label="fragment_news_list"
         tools:layout="@layout/fragment_news_list">
-<!--        <action-->
-<!--            android:id="@+id/action_newsListFragment_to_newsDetailFragment"-->
-<!--            app:destination="@id/newsDetailFragment" />-->
+
+        <action
+            android:id="@+id/action_newsListFragment_to_newsDetailFragment"
+            app:destination="@id/newsDetailFragment" />
     </fragment>
     <fragment
         android:id="@+id/newsDetailFragment"

@@ -1,4 +1,4 @@
-package com.example.news
+package com.example.news.db
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
@@ -8,6 +8,6 @@ import com.example.data_news.repositories.local.NewsDatabase
 
 @Database(
     entities = [NewsEntity::class],
-    version = 8
+    version = 1
 )
 abstract class AppDataBase : RoomDatabase(), NewsDatabase

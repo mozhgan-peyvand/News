@@ -19,7 +19,9 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-class NetworkModule {
+object NetworkModule {
+
+    private const val CONNECTION_TIMEOUT_SECONDS = 60L
 
     @Singleton
     @Provides
@@ -40,7 +42,7 @@ class NetworkModule {
     ): Retrofit = Retrofit.Builder()
         .client(httpClient)
         .addConverterFactory(MoshiConverterFactory.create())
-        .baseUrl(ApiUrlHelper.API_URL)
+        .baseUrl("https://newsapi.org/v2/")
         .build()
 
 
@@ -55,7 +57,8 @@ class NetworkModule {
         dispatcher.maxRequests = 20
         dispatcher.maxRequestsPerHost = 20
 
-        val okHttpClientBuilder = OkHttpClient.Builder().addNetworkInterceptor(httpLoggingInterceptor)
+        val okHttpClientBuilder = OkHttpClient.Builder()
+        okHttpClientBuilder.addNetworkInterceptor(httpLoggingInterceptor)
             .dispatcher(dispatcher)
             .connectionPool(ConnectionPool(100, timeOut, TimeUnit.SECONDS))
             .readTimeout(timeOut, TimeUnit.SECONDS)

@@ -13,7 +13,7 @@ abstract class NewsDaoModule {
 
     companion object {
         @Provides
-        fun bindJobDataBase(newsDatabase: NewsDatabase): NewsDao {
+        fun bindNewsDataBase(newsDatabase: NewsDatabase): NewsDao {
             return newsDatabase.newsDao()
         }
     }

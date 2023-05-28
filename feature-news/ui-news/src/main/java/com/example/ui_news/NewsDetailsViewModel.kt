@@ -19,7 +19,7 @@ class NewsDetailsViewModel @Inject constructor(
     state: SavedStateHandle
 ) : ViewModel() {
 
-//    private val newsId = NewsDetailFragmentArgs.fromSavedStateHandle(state).id
+    private val newsId = NewsDetailFragmentArgs.fromSavedStateHandle(state).id
 
     private val _uiState = MutableStateFlow(NewsDetailsUiState())
     val uiState: StateFlow<NewsDetailsUiState> = _uiState.asStateFlow()
@@ -31,7 +31,7 @@ class NewsDetailsViewModel @Inject constructor(
     private fun getNewsDetails() {
 
         viewModelScope.launch {
-            val result = getLocalDetailNews(/*newsId*/120)
+            val result = getLocalDetailNews(newsId)
             _uiState.update { it.copy(newsDetails = result) }
         }
     }

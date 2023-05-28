@@ -1,6 +1,5 @@
 package com.example.data_android.dataSourceImpl
 
-import com.example.base.api.ApiUrlHelper
 import com.example.base.api.NetworkCallHandler
 import com.example.data_news.models.NewsResponse
 import com.example.data_news.repositories.remote.NewsRemoteDataSource
@@ -14,7 +13,7 @@ class NewsRemoteDataSourceImpl @Inject constructor(
 ): NewsRemoteDataSource  {
     override suspend fun getNewsList(): Result<NewsResponse> {
         return networkCallHandler.call {
-            service.getNews(url = ApiUrlHelper.API_URL)
+            service.getNews()
         }
     }
 }
