@@ -23,6 +23,7 @@ dependencies {
 
     implementation(project(ModuleNames.newsDomain))
     implementation(project(ModuleNames.base))
+    implementation(project(ModuleNames.commonUi))
 
     //UI
     implementation Libraries.recyclerView
@@ -38,8 +39,6 @@ dependencies {
     //navigation
     implementation Libraries.navigationFragment
     implementation Libraries.navigationUiKtx
-    implementation Libraries.navigationRuntime
-    implementation Libraries.navigationCommonKtx
 
     //lifecycle
     implementation Libraries.lifecycleViewModelKtx
