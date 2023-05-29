@@ -29,14 +29,12 @@ dependencies {
     implementation Libraries.room
 
     //lifecycle
-    implementation Libraries.lifecycleExtensions
-    implementation Libraries.lifecycleLiveData
-    implementation Libraries.lifecycleRuntime
-    implementation Libraries.lifecycleViewModel
+    implementation Libraries.lifecycleRuntimeKtx
     implementation Libraries.lifecycleViewModelKtx
 
     //navigation
     implementation Libraries.navigationUiKtx
     implementation Libraries.navigationFragment
+    implementation Libraries.navigationRuntime
 
 }

@@ -1,10 +1,21 @@
 apply plugin: BuildPlugins.MODULE_PLUGIN
 apply plugin: BuildPlugins.HILT_PLUGIN
+apply plugin: BuildPlugins.KOTLIN_KAPT
 apply plugin: BuildPlugins.NAVIGATION_SAFE_ARGS
+apply plugin: BuildPlugins.ORG_JETBRAINS_KOTLIN_ANDROID
 
 android {
     buildFeatures {
         viewBinding = true
+    }
+
+    packagingOptions {
+        resources {
+            excludes += ["META-INF/LICENSE.md", "META-INF/LICENSE-notice.md"]
+        }
+    }
+    kapt {
+        correctErrorTypes = true
     }
 }
 
@@ -27,6 +38,12 @@ dependencies {
     //navigation
     implementation Libraries.navigationFragment
     implementation Libraries.navigationUiKtx
+    implementation Libraries.navigationRuntime
+    implementation Libraries.navigationCommonKtx
+
+    //lifecycle
+    implementation Libraries.lifecycleViewModelKtx
+    implementation Libraries.lifecycleRuntimeKtx
 
     //Ui
     implementation Libraries.material

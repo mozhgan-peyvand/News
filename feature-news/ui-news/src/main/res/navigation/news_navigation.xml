@@ -8,9 +8,8 @@
     <fragment
         android:id="@+id/newsListFragment"
         android:name="com.example.ui_news.NewsListFragment"
-        android:label="fragment_news_list"
+        android:label="BBC"
         tools:layout="@layout/fragment_news_list">
-
         <action
             android:id="@+id/action_newsListFragment_to_newsDetailFragment"
             app:destination="@id/newsDetailFragment" />
@@ -18,10 +17,11 @@
     <fragment
         android:id="@+id/newsDetailFragment"
         android:name="com.example.ui_news.NewsDetailFragment"
-        android:label=""
+        android:label="fragment_news_detail"
         tools:layout="@layout/fragment_news_detail">
         <argument
             android:name="id"
-            app:argType="integer" />
+            app:argType="integer"
+            />
     </fragment>
 </navigation>
