@@ -17,7 +17,7 @@ object Versions {
     const val testExtJunit = "1.1.5"
     const val testEspresso = "3.5.1"
     const val accompanist = "0.27.0"
-    const val hilt = "2.44"
+    const val hilt = "2.45"
     const val hiltCompiler = "2.43.2"
     const val retrofit = "2.9.0"
     const val okhttp = "4.10.0"
@@ -42,12 +42,16 @@ object Libraries {
     const val lifecycleViewModelKtx =
         "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycle}"
     const val lifecycleRuntimeKtx = "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.lifecycle}"
+    const val lifecycleViewModelSaveState = "androidx.lifecycle:lifecycle-viewmodel-savedstate:1.0.0-alpha02"
+
 
     // Navigation
     const val navigationFragment =
         "androidx.navigation:navigation-fragment-ktx:${Versions.navigationVersion}"
     const val navigationUiKtx =
         "androidx.navigation:navigation-ui-ktx:${Versions.navigationVersion}"
+    const val navigationRuntime = "androidx.navigation:navigation-runtime-ktx:${Versions.navigationVersion}"
+    const val navigationCommonKtx = "androidx.navigation:navigation-common-ktx:${Versions.navigationVersion}"
 
     // Coroutines
     const val coroutinesCore =
@@ -66,19 +70,10 @@ object Libraries {
     const val mockk = "io.mockk:mockk:${Versions.mockk}"
     const val turbine = "app.cash.turbine:turbine:${Versions.turbine}"
 
-    //lifecycle
-    const val lifecycleExtensions =
-        "androidx.lifecycle:lifecycle-extensions:${Versions.lifecycleExtensions}"
-    const val lifecycleViewModel =
-        "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycle}"
-    const val lifecycleLiveData = "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.lifecycle}"
-    const val lifecycleRuntime = "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.lifecycle}"
-
-
     //hilt
     const val hilt = "com.google.dagger:hilt-android:${Versions.hilt}"
 
-    // network
+    //network
     const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
     const val retrofitConvertor = "com.squareup.retrofit2:converter-moshi:${Versions.retrofit}"
     const val okhttpInterceptor = "com.squareup.okhttp3:logging-interceptor:${Versions.okhttp}"

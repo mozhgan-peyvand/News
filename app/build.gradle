@@ -70,6 +70,8 @@ dependencies {
     //navigation
     implementation Libraries.navigationFragment
     implementation Libraries.navigationUiKtx
+    implementation Libraries.navigationRuntime
+    implementation Libraries.navigationCommonKtx
 
     //room
     implementation Libraries.roomKtx
