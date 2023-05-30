@@ -1,0 +1,16 @@
+
+apply plugin: BuildPlugins.MODULE_PLUGIN
+
+android {
+    buildFeatures {
+        viewBinding = true
+    }
+}
+
+dependencies {
+
+    //Ui
+    implementation Libraries.constraintLayout
+    implementation Libraries.material
+
+}
