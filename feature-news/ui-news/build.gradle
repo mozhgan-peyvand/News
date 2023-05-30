@@ -48,4 +48,19 @@ dependencies {
     implementation Libraries.material
     implementation Libraries.constraintLayout
     implementation Libraries.recyclerView
+
+    //test
+    implementation Libraries.junitTest
+    implementation Libraries.kotlinCoroutinesTest
+    implementation Libraries.mockkTest
+    implementation Libraries.mockWebServerTest
+    implementation Libraries.turbineTest
+
+    //androidTest
+    androidTestImplementation Libraries.espressoAndroidTest
+    androidTestImplementation Libraries.junitAndroidTest
+    androidTestImplementation Libraries.kotlinCoroutinesAndroidTest
+    androidTestImplementation Libraries.mockkAndroidAndroidTest
+    androidTestImplementation Libraries.mockkAndroidTest
+    androidTestImplementation Libraries.turbineAndroidTest
 }

@@ -35,6 +35,5 @@ dependencies {
     //navigation
     implementation Libraries.navigationUiKtx
     implementation Libraries.navigationFragment
-    implementation Libraries.navigationRuntime
 
 }
