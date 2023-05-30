@@ -9,13 +9,10 @@ import dagger.hilt.components.SingletonComponent
 
 @Module
 @InstallIn(SingletonComponent::class)
-abstract class NewsDaoModule {
-
-    companion object {
-        @Provides
-        fun bindNewsDataBase(newsDatabase: NewsDatabase): NewsDao {
-            return newsDatabase.newsDao()
-        }
+object NewsDaoModule {
+    @Provides
+    fun bindNewsDataBase(newsDatabase: NewsDatabase): NewsDao {
+        return newsDatabase.newsDao()
     }
 
 }
