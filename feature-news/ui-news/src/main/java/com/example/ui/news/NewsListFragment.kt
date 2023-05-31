@@ -1,15 +1,14 @@
-package com.example.ui_news
+package com.example.ui.news
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.fragment.app.viewModels
 import com.example.base.util.collectOn
 import com.example.base.util.safeNavigate
 import com.example.base.util.viewBinding
+import com.example.ui_news.R
 import com.example.ui_news.databinding.FragmentNewsListBinding
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -32,7 +31,9 @@ class NewsListFragment : Fragment(R.layout.fragment_news_list) {
         // region initRecyclerView
         val adapter = NewsListAdapter { news ->
             safeNavigate(
-                NewsListFragmentDirections.actionNewsListFragmentToNewsDetailFragment(news.id)
+                NewsListFragmentDirections.actionNewsListFragmentToNewsDetailFragment(
+                    news.id
+                )
             )
         }
         binding.newsList.let { newsList ->

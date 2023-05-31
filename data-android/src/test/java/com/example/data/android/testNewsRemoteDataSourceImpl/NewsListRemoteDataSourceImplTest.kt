@@ -11,7 +11,7 @@ import org.junit.After
 import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test
-import com.example.base.models.Result
+import com.example.base.models.Resource
 import com.example.base.models.Exceptions
 import com.example.data_android.dataSourceImpl.NewsRemoteDataSourceImpl
 import com.example.data_android.testNewsRemoteDataSourceImpl.api.FakeConnectionManager
@@ -63,8 +63,8 @@ class NewsListRemoteDataSourceImplTest {
         val result = remoteDataSource.getNewsList()
 
         // Assert
-        assert(result is Result.Success)
-        assertEquals((result as Result.Success).data.articles, expectedNewsList)
+        assert(result is Resource.Success)
+        assertEquals((result as Resource.Success).data.articles, expectedNewsList)
     }
 
     @Test
@@ -86,8 +86,8 @@ class NewsListRemoteDataSourceImplTest {
         val result = remoteDataSource.getNewsList()
 
         // Assert
-        assert(result is Result.Error)
-        assert((result as Result.Error).error is Exceptions.GeneralRemoteException)
+        assert(result is Resource.Error)
+        assert((result as Resource.Error).error is Exceptions.GeneralRemoteException)
     }
 
     @Test
@@ -109,8 +109,8 @@ class NewsListRemoteDataSourceImplTest {
         val result = remoteDataSource.getNewsList()
 
         // Assert
-        assert(result is Result.Error)
-        assert((result as Result.Error).error is Exceptions.GeneralRemoteException)
+        assert(result is Resource.Error)
+        assert((result as Resource.Error).error is Exceptions.GeneralRemoteException)
     }
 
 }

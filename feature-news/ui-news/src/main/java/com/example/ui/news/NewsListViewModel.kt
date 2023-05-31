@@ -1,4 +1,4 @@
-package com.example.ui_news
+package com.example.ui.news
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -6,7 +6,7 @@ import com.example.base.models.NewsListUiState
 import com.example.base.util.collectOn
 import com.example.domain_news.usecase.GetLocalNews
 import com.example.domain_news.usecase.GetRemoteNews
-import com.example.base.models.Result
+import com.example.base.models.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -43,10 +43,10 @@ class NewsListViewModel @Inject constructor(
 
         viewModelScope.launch {
             when (val result = getRemoteNews()) {
-                is Result.Success -> {
+                is Resource.Success -> {
                     _uiState.update { it.copy(isLoading = false, error = null) }
                 }
-                is Result.Error -> {
+                is Resource.Error -> {
                     _uiState.update { it.copy(isLoading = false, error = result.error) }
                 }
             }

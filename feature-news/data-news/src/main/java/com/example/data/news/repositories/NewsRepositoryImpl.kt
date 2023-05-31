@@ -6,9 +6,8 @@ import com.example.data_news.repositories.local.NewsLocalDataSource
 import com.example.data_news.repositories.remote.NewsRemoteDataSource
 import com.example.domain_news.repository.NewsRepository
 import kotlinx.coroutines.flow.Flow
-import com.example.base.models.Result
+import com.example.base.models.Resource
 import com.example.data_news.models.toNewsEntity
-import kotlinx.coroutines.flow.map
 import javax.inject.Inject
 
 class NewsRepositoryImpl @Inject constructor(
@@ -20,9 +19,9 @@ class NewsRepositoryImpl @Inject constructor(
         return newsLocalDataSource.getTopHeadLines()
     }
 
-    override suspend fun updateTopHeadlines(): Result<Unit> {
+    override suspend fun updateTopHeadlines(): Resource<Unit> {
         return when (val result = newsRemoteDataSource.getNewsList()) {
-            is Result.Success -> {
+            is Resource.Success -> {
 
                 newsLocalDataSource.removeTopHeadlines()
 
@@ -30,11 +29,11 @@ class NewsRepositoryImpl @Inject constructor(
                     it.toNewsEntity()
                 })
 
-                Result.Success(Unit)
+                Resource.Success(Unit)
 
             }
-            is Result.Error -> {
-                Result.Error(result.error)
+            is Resource.Error -> {
+                Resource.Error(result.error)
             }
 
         }

@@ -4,6 +4,7 @@ import com.example.base.models.Exceptions
 import com.example.base.models.NewsListUiState
 import com.example.domain_news.usecase.GetLocalNews
 import com.example.domain_news.usecase.GetRemoteNews
+import com.example.ui.news.NewsListViewModel
 import com.example.ui_news.util.CoroutineRule
 import com.example.ui_news.util.FakeNewsListRepository
 import kotlinx.coroutines.ExperimentalCoroutinesApi

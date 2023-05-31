@@ -3,6 +3,7 @@ package com.example.ui_news
 import androidx.lifecycle.SavedStateHandle
 import com.example.base.models.NewsDetailsUiState
 import com.example.domain_news.usecase.GetLocalDetailNews
+import com.example.ui.news.NewsDetailsViewModel
 import com.example.ui_news.util.CoroutineRule
 import com.example.ui_news.util.FakeNewsListRepository
 import kotlinx.coroutines.ExperimentalCoroutinesApi

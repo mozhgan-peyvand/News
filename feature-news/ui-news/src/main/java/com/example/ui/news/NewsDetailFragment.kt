@@ -1,4 +1,4 @@
-package com.example.ui_news
+package com.example.ui.news
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,8 +7,8 @@ import androidx.fragment.app.viewModels
 import coil.load
 import com.example.base.util.collectOn
 import com.example.base.util.viewBinding
+import com.example.ui_news.R
 import com.example.ui_news.databinding.FragmentNewsDetailBinding
-import com.example.ui_news.databinding.FragmentNewsDetailBinding.bind
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

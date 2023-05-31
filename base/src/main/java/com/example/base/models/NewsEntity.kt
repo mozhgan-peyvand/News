@@ -13,12 +13,6 @@ data class NewsEntity(
     val publishedAt: String,
     val urlToImage: String
 ){
-    fun toNews() = News(
-        id = id,
-        title = title,
-        urlToImage = urlToImage
-    )
-
     fun toNewsDetails() = NewsDetails(
         id = id,
         title = title,
