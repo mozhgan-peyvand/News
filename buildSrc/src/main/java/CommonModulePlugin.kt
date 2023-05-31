@@ -1,10 +1,8 @@
+import com.android.build.gradle.BaseExtension
+import org.gradle.api.JavaVersion
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.dependencies
-import java.io.ByteArrayOutputStream
-import com.android.build.gradle.BaseExtension
-import org.gradle.api.JavaVersion
-import org.gradle.kotlin.dsl.provideDelegate
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 
@@ -45,29 +43,12 @@ class CommonModulePlugin : Plugin<Project> {
                     consumerProguardFiles("proguard-rules.pro")
 
                 }
-
-//                flavorDimensions("mode")
-//                productFlavors {
-//                    create("mock") {
-//                        dimension("mode")
-//                    }
-//                    create("stage") {
-//                        dimension("mode")
-//                    }
-//                    create("prod") {
-//                        dimension("mode")
-//                    }
-//                }
             }
             // dependencies common to all projects
             with(project) {
                 dependencies {
                     add("implementation", "androidx.core:core-ktx:1.7.0")
                     add("implementation","androidx.appcompat:appcompat:1.6.1")
-                    // testing dependencies
-                    add("testImplementation", "junit:junit:4.+")
-                    add("androidTestImplementation", "androidx.test.ext:junit:1.1.3")
-                    add("androidTestImplementation", "androidx.test.espresso:espresso-core:3.4.0")
                 }
 
             }

@@ -3,7 +3,7 @@ package com.example.news.db
 import android.content.Context
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.example.data_news.repositories.local.NewsDatabase
+import com.example.data.news.repositories.local.NewsDatabase
 import dagger.Binds
 import dagger.Module
 import dagger.Provides

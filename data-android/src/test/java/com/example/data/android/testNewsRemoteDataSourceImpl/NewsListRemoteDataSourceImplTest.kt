@@ -1,7 +1,7 @@
-package com.example.data_android.testNewsRemoteDataSourceImpl
+package com.example.data.android.testNewsRemoteDataSourceImpl
 
 import com.example.base.api.NetworkCallHandler
-import com.example.data_news.repositories.remote.NewsService
+import com.example.data.news.repositories.remote.NewsService
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runTest
 import okhttp3.OkHttpClient
@@ -13,8 +13,12 @@ import org.junit.Before
 import org.junit.Test
 import com.example.base.models.Resource
 import com.example.base.models.Exceptions
-import com.example.data_android.dataSourceImpl.NewsRemoteDataSourceImpl
-import com.example.data_android.testNewsRemoteDataSourceImpl.api.FakeConnectionManager
+import com.example.data.android.dataSourceImpl.NewsRemoteDataSourceImpl
+import com.example.data.android.testNewsRemoteDataSourceImpl.api.FakeConnectionManager
+import com.example.data.android.testNewsRemoteDataSourceImpl.models.errorResponse
+import com.example.data.android.testNewsRemoteDataSourceImpl.models.newsListSuccessfulResponse
+import com.example.data.android.testNewsRemoteDataSourceImpl.models.newsResponse1
+import com.example.data.android.testNewsRemoteDataSourceImpl.models.newsResponse2
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 

@@ -1,15 +1,14 @@
 package com.example.ui.news
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.View
 import androidx.core.view.isVisible
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.example.base.util.collectOn
 import com.example.base.util.safeNavigate
 import com.example.base.util.viewBinding
-import com.example.ui_news.R
-import com.example.ui_news.databinding.FragmentNewsListBinding
+import com.example.ui.news.databinding.FragmentNewsListBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 

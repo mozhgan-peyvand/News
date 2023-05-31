@@ -1,8 +1,8 @@
-package com.example.data_android.dataSourceImpl
+package com.example.data.android.dataSourceImpl
 
 import com.example.base.models.NewsEntity
-import com.example.data_news.repositories.local.NewsDao
-import com.example.data_news.repositories.local.NewsLocalDataSource
+import com.example.data.news.repositories.local.NewsDao
+import com.example.data.news.repositories.local.NewsLocalDataSource
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 

@@ -1,7 +1,7 @@
-package com.example.ui_news.util
+package com.example.ui.news.util
 
 import com.example.base.models.*
-import com.example.domain_news.repository.NewsRepository
+import com.example.domain.news.repository.NewsRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flowOf
 
@@ -11,20 +11,20 @@ class FakeNewsListRepository(
 
     var newsList: Flow<List<NewsEntity>> = flowOf()
 
-    override fun getTopHeadlines(): Flow<List<NewsEntity>> {
+    override fun getLocalNewsList(): Flow<List<NewsEntity>> {
         return newsList
-    }
-
-    override suspend fun updateTopHeadlines(): Resource<Unit> {
-        return if (isSuccessful) {
-            Resource.Success(Unit)
-        } else {
-            Resource.Error(Exceptions.GeneralRemoteException())
-        }
     }
 
     var newsDetails: NewsDetails? = null
     override suspend fun getNewsDetails(id: Int): NewsDetails {
         return newsDetails ?: NewsDetails(0, "", "", "", "")
+    }
+
+    override suspend fun getRemoteNewsList(): Resource<Unit> {
+        return if (isSuccessful) {
+            Resource.Success(Unit)
+        } else {
+            Resource.Error(Exceptions.GeneralRemoteException())
+        }
     }
 }

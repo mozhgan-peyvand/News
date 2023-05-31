@@ -1,4 +1,4 @@
-package com.example.data_android.testNewsRemoteDataSourceImpl
+package com.example.data.android.testNewsRemoteDataSourceImpl.models
 
 val newsListSuccessfulResponse = """
     {

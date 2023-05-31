@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.example.base.models.NewsEntity
-import com.example.ui_news.databinding.ItemNewsBinding
+import com.example.ui.news.databinding.ItemNewsBinding
 
 
 class NewsListAdapter(
