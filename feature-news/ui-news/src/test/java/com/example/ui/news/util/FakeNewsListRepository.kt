@@ -1,4 +1,4 @@
-package com.example.data_news
+package com.example.ui_news.util
 
 import com.example.base.models.*
 import com.example.domain_news.repository.NewsRepository
@@ -15,11 +15,11 @@ class FakeNewsListRepository(
         return newsList
     }
 
-    override suspend fun updateTopHeadlines(): Result<Unit> {
+    override suspend fun updateTopHeadlines(): Resource<Unit> {
         return if (isSuccessful) {
-            Result.Success(Unit)
+            Resource.Success(Unit)
         } else {
-            Result.Error(Exceptions.GeneralRemoteException())
+            Resource.Error(Exceptions.GeneralRemoteException())
         }
     }
 

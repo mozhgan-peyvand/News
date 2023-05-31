@@ -1,10 +1,11 @@
-package com.example.ui_news
+package com.example.ui.news
 
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.base.models.NewsDetailsUiState
 import com.example.domain_news.usecase.GetLocalDetailNews
+import com.example.ui_news.NewsDetailFragmentArgs
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
