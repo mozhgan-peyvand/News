@@ -9,7 +9,7 @@
         android:id="@+id/listItem"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/spacing_4x"
+        android:layout_margin="@dimen/spacing_base"
         android:clickable="true"
         android:focusable="true">
 

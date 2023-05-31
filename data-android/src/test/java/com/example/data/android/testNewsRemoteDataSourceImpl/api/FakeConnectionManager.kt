@@ -1,4 +1,4 @@
-package com.example.data_android.testNewsRemoteDataSourceImpl.api
+package com.example.data.android.testNewsRemoteDataSourceImpl.api
 
 import com.example.base.api.ConnectionManager
 

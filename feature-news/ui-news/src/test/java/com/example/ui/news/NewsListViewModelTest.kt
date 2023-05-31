@@ -1,12 +1,13 @@
-package com.example.ui_news
+package com.example.ui.news
 
 import com.example.base.models.Exceptions
 import com.example.base.models.NewsListUiState
-import com.example.domain_news.usecase.GetLocalNews
-import com.example.domain_news.usecase.GetRemoteNews
-import com.example.ui.news.NewsListViewModel
-import com.example.ui_news.util.CoroutineRule
-import com.example.ui_news.util.FakeNewsListRepository
+import com.example.domain.news.usecase.GetLocalNews
+import com.example.domain.news.usecase.GetRemoteNews
+import com.example.ui.news.models.newsEntityTest1
+import com.example.ui.news.models.newsEntityTest2
+import com.example.ui.news.util.CoroutineRule
+import com.example.ui.news.util.FakeNewsListRepository
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.flowOf
 import kotlinx.coroutines.test.runCurrent
@@ -26,14 +27,14 @@ class NewsListViewModelTest {
 
         // Arrange
         val fakeRepository = FakeNewsListRepository()
-        fakeRepository.newsList = flowOf(listOf(news1, news2))
+        fakeRepository.newsList = flowOf(listOf(newsEntityTest1, newsEntityTest2))
 
         val viewModel = NewsListViewModel(
             getRemoteNews = GetRemoteNews(fakeRepository),
             getLocalNews = GetLocalNews(fakeRepository)
         )
 
-        val expectedState = NewsListUiState(newsList = listOf(news1, news2))
+        val expectedState = NewsListUiState(newsList = listOf(newsEntityTest1, newsEntityTest2))
 
         // Act
         runCurrent()

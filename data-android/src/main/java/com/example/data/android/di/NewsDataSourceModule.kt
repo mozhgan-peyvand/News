@@ -1,9 +1,9 @@
-package com.example.data_android.di
+package com.example.data.android.di
 
-import com.example.data_android.dataSourceImpl.NewsLocalDataSourceImpl
-import com.example.data_android.dataSourceImpl.NewsRemoteDataSourceImpl
-import com.example.data_news.repositories.local.NewsLocalDataSource
-import com.example.data_news.repositories.remote.NewsRemoteDataSource
+import com.example.data.android.dataSourceImpl.NewsLocalDataSourceImpl
+import com.example.data.android.dataSourceImpl.NewsRemoteDataSourceImpl
+import com.example.data.news.repositories.local.NewsLocalDataSource
+import com.example.data.news.repositories.remote.NewsRemoteDataSource
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn

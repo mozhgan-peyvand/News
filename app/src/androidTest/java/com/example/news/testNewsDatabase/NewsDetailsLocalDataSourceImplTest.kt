@@ -5,11 +5,9 @@ import androidx.room.Room
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import app.cash.turbine.test
-import com.example.data_android.dataSourceImpl.NewsLocalDataSourceImpl
-import com.example.data_news.repositories.local.NewsDao
+import com.example.data.android.dataSourceImpl.NewsLocalDataSourceImpl
+import com.example.data.news.repositories.local.NewsDao
 import com.example.news.db.AppDataBase
-import dagger.hilt.android.internal.testing.root.*
-import dagger.hilt.android.testing.*
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runTest
 import org.junit.After
@@ -21,7 +19,6 @@ import java.io.IOException
 
 @ExperimentalCoroutinesApi
 @RunWith(AndroidJUnit4::class)
-@HiltAndroidTest
 class NewsLocalDataSourceImplTest {
     private lateinit var database: AppDataBase
     private lateinit var newsListDao: NewsDao

@@ -1,4 +1,4 @@
-package com.example.domain_news.repository
+package com.example.domain.news.repository
 
 import com.example.base.models.NewsDetails
 import com.example.base.models.NewsEntity
@@ -8,9 +8,9 @@ import com.example.base.models.Resource
 
 interface NewsRepository {
 
-    fun getTopHeadlines(): Flow<List<NewsEntity>>
+    fun getLocalNewsList(): Flow<List<NewsEntity>>
 
-    suspend fun updateTopHeadlines(): Resource<Unit>
+    suspend fun getRemoteNewsList(): Resource<Unit>
 
     suspend fun getNewsDetails(id: Int): NewsDetails
 

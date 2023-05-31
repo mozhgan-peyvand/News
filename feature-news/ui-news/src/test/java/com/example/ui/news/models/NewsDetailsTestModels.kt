@@ -1,4 +1,4 @@
-package com.example.ui_news
+package com.example.ui.news.models
 
 import com.example.base.models.NewsDetails
 

@@ -1,4 +1,4 @@
-package com.example.data_news.repositories.local
+package com.example.data.news.repositories.local
 
 
 interface NewsDatabase {

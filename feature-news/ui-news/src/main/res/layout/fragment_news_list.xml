@@ -20,7 +20,7 @@
         android:id="@+id/newsList"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:paddingHorizontal="@dimen/spacing_4x"
+        android:paddingHorizontal="@dimen/spacing_base"
         android:paddingVertical="@dimen/spacing_2x"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"

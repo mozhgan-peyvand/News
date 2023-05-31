@@ -1,11 +1,11 @@
-package com.example.ui_news
+package com.example.ui.news
 
 import androidx.lifecycle.SavedStateHandle
 import com.example.base.models.NewsDetailsUiState
-import com.example.domain_news.usecase.GetLocalDetailNews
-import com.example.ui.news.NewsDetailsViewModel
-import com.example.ui_news.util.CoroutineRule
-import com.example.ui_news.util.FakeNewsListRepository
+import com.example.domain.news.usecase.GetLocalDetailNews
+import com.example.ui.news.models.newsDetails
+import com.example.ui.news.util.CoroutineRule
+import com.example.ui.news.util.FakeNewsListRepository
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runCurrent
 import kotlinx.coroutines.test.runTest

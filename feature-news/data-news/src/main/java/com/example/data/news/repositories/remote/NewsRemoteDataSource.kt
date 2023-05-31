@@ -1,6 +1,6 @@
-package com.example.data_news.repositories.remote
+package com.example.data.news.repositories.remote
 
-import com.example.data_news.models.NewsResponse
+import com.example.data.news.models.NewsResponse
 import com.example.base.models.Resource
 
 interface NewsRemoteDataSource {

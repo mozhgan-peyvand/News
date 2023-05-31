@@ -1,4 +1,4 @@
-package com.example.data_news.repositories.local
+package com.example.data.news.repositories.local
 
 import com.example.base.models.NewsEntity
 import kotlinx.coroutines.flow.Flow

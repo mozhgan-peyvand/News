@@ -4,8 +4,8 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.base.models.NewsListUiState
 import com.example.base.util.collectOn
-import com.example.domain_news.usecase.GetLocalNews
-import com.example.domain_news.usecase.GetRemoteNews
+import com.example.domain.news.usecase.GetLocalNews
+import com.example.domain.news.usecase.GetRemoteNews
 import com.example.base.models.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow

@@ -1,7 +1,7 @@
-package com.example.domain_news.usecase
+package com.example.domain.news.usecase
 
 import com.example.base.models.NewsDetails
-import com.example.domain_news.repository.NewsRepository
+import com.example.domain.news.repository.NewsRepository
 import javax.inject.Inject
 
 class GetLocalDetailNews @Inject constructor(

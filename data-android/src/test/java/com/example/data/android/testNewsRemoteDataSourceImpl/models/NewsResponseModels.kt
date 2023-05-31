@@ -1,6 +1,6 @@
-package com.example.data_android.testNewsRemoteDataSourceImpl
+package com.example.data.android.testNewsRemoteDataSourceImpl.models
 
-import com.example.data_news.models.Article
+import com.example.data.news.models.Article
 
 val newsResponse1 = Article(
     title = "Winter storm brings snow to California and tornadoes to central US",

@@ -1,4 +1,4 @@
-package com.example.ui_news.util
+package com.example.ui.news.util
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi

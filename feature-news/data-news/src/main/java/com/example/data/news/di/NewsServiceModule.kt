@@ -1,6 +1,6 @@
-package com.example.data_news.di
+package com.example.data.news.di
 
-import com.example.data_news.repositories.remote.NewsService
+import com.example.data.news.repositories.remote.NewsService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

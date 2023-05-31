@@ -1,4 +1,4 @@
-package com.example.data_news.models
+package com.example.data.news.models
 
 import com.example.base.models.NewsEntity
 import com.squareup.moshi.JsonClass
