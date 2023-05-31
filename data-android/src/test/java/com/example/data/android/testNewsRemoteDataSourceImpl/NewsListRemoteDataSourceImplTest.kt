@@ -1,6 +1,6 @@
 package com.example.data.android.testNewsRemoteDataSourceImpl
 
-import com.example.base.api.NetworkCallHandler
+import com.example.base.api.NetworkHandler
 import com.example.data.news.repositories.remote.NewsService
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runTest
@@ -59,7 +59,7 @@ class NewsListRemoteDataSourceImplTest {
 
         val remoteDataSource = NewsRemoteDataSourceImpl(
             apiService,
-            NetworkCallHandler(FakeConnectionManager())
+            NetworkHandler(FakeConnectionManager())
         )
         val expectedNewsList = listOf(newsResponse1, newsResponse2)
 
@@ -83,7 +83,7 @@ class NewsListRemoteDataSourceImplTest {
 
         val remoteDataSource = NewsRemoteDataSourceImpl(
             apiService,
-            NetworkCallHandler(FakeConnectionManager())
+            NetworkHandler(FakeConnectionManager())
         )
 
         // Act
@@ -106,7 +106,7 @@ class NewsListRemoteDataSourceImplTest {
 
         val remoteDataSource = NewsRemoteDataSourceImpl(
             apiService,
-            NetworkCallHandler(FakeConnectionManager())
+            NetworkHandler(FakeConnectionManager())
         )
 
         // Act

@@ -5,7 +5,7 @@ import com.example.base.models.Resource
 import com.example.base.models.Exceptions
 import javax.inject.Inject
 
-class NetworkCallHandler @Inject constructor(
+class NetworkHandler @Inject constructor(
     private val connectionManager: ConnectionManager
 ) {
 
