@@ -54,13 +54,13 @@ I decided to develop this app by using **MVVM clean architecture**. And here are
   
 - **buildSrc:** This module is responsible for holding all dependency definitions and Gradle configurations. It has been implemented all with Kotlin-DSL.
 
-- **common-ui:** this module is responsible for holding all the ui common like retry dialog and it can exit in all of feature.
+- **common-ui:** This module houses common UI components, such as the retry dialog, which are shared among ui features..
 
 - **data-android:** Following the principle of separation between interfaces and their implementation, this module contains the implementation classes (remoteImpl and localImpl) for remote and local interfaces in the data layer.
  
 - **feature-news:** this module holds all module related to news feature : 
  
-   - **data-news:** This module holds all classes and files, including utils, APIs, Caches, etc related to New data.
+   - **data-news:** This module holds all classes and files, including service, APIs, RepositoryImpl, etc related to New data.
   
    - **domain-news:** I believe that the domain is the app's language; it speaks about all the services it provides. So you can find all use-cases used within the app here. Note that the UI and Data layers depend on this module according to clean architecture concepts.
   
