@@ -1,4 +1,5 @@
-name: Hello, World!
+name: Class Design Check
+
 on:
   push:
     branches:
@@ -7,9 +8,20 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Print Hello, World!
-        run: echo "Hello, World!"
+      - name: Set up JDK
+        uses: actions/setup-java@v2
+        with:
+          java-version: '11'
+
+      - name: Install detekt
+        run: |
+          curl -L -o detekt-cli https://github.com/detekt/detekt/releases/latest/download/detekt-cli-1.18.0-all.jar
+
+      - name: Run detekt
+        run: |
+          java -jar detekt-cli --input src/main/kotlin
