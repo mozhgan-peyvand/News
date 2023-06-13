@@ -21,7 +21,7 @@ jobs:
 
       - name: Install detekt
         run: |
-          curl -L -o detekt-cli https://github.com/detekt/detekt/releases/latest/download/detekt-cli-1.18.0-all.jar
+          wget -O detekt-cli https://github.com/detekt/detekt/releases/latest/download/detekt-cli-1.18.0-all.jar
 
       - name: Run detekt
         run: |
