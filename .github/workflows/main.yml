@@ -25,4 +25,4 @@ jobs:
 
       - name: Run detekt
         run: |
-          java -jar detekt-cli --input $GITHUB_WORKSPACE/src/main/java/com/example/news
+          java -jar detekt-cli --input $GITHUB_WORKSPACE/feature-news/data-news/src/main/java/com/example/data/news/repositories/local
