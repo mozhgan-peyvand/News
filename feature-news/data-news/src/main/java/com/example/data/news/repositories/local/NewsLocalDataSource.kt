@@ -12,5 +12,4 @@ interface NewsLocalDataSource {
     suspend fun removeTopHeadlines()
 
     suspend fun getNewsDetails(id: Int): NewsEntity
-
 }

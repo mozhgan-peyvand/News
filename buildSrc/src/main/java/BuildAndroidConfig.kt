@@ -7,7 +7,7 @@ object BuildAndroidConfig {
     const val MIN_SDK_VERSION = 23
     const val TARGET_SDK_VERSION = 33
     const val SUPPORT_LIBRARY_VECTOR_DRAWABLES = true
-    const val BUILD_TOOLS_VERSION = "30.0.2"
+    const val BUILD_TOOLS_VERSION = "33.0.0"
 }
 
 object Ext {
