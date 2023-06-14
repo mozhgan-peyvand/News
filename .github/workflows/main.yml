@@ -23,6 +23,6 @@ jobs:
         run: |
           wget -O detekt-cli https://github.com/detekt/detekt/releases/download/v1.18.0/detekt-cli-1.18.0-all.jar
 
-      - name: List repository contents
+      - name: Run detekt
         run: |
-          ls -R $GITHUB_WORKSPACE
+          java -jar detekt-cli --input $GITHUB_WORKSPACE/src/main/kotlin/com/example
