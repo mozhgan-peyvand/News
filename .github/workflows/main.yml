@@ -25,4 +25,4 @@ jobs:
 
       - name: Run detekt
         run: |
-          java -jar detekt-cli --input $GITHUB_WORKSPACE/src/main/java
+          java -jar detekt-cli --input $GITHUB_WORKSPACE/src/main/kotlin
