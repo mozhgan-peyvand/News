@@ -21,4 +21,5 @@ interface NewsDao {
 
     @Query("SELECT * FROM NewsEntity WHERE id = :id")
     suspend fun getNewsDetails(id: Int): NewsEntity
+
 }
